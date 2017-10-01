@@ -8,11 +8,11 @@ $(function () {
 
         $.get(url, function (data) {
             console.log(data);
-            var detail =  "<table align = 'center'><tr><td class='left'><h1>Description : <h1></td><td class = 'right'><h1>" 
-            + data.weather[0].description + "</h1></td></tr><tr><td class='left'><h1>Temp : </h1></td><td class = 'right'><h1>" 
-            + (data.main.temp / (10)).toFixed(3) + " C</h1></td></tr><tr><td class='left'><h1>Heat : </h1></td><td class = 'right'><h1>" 
-            + data.main.pressure + " hPa</td></tr></h1><tr><td class='left'><h1>Humidity : </h1></td><td class = 'right'><h1>" 
-            + data.main.humidity + " %</h1></td></tr></table>";
+            var detail =  "<table align = 'center'><tr><td class='left'><h2>Description : <h2></td><td class = 'right'><h2>" 
+            + data.weather[0].description + "</h2></td></tr><tr><td class='left'><h2>Temperature : </h2></td><td class = 'right'><h2>" 
+            + (data.main.temp / (10)).toFixed(3) + " C</h2></td></tr><tr><td class='left'><h2>Heat : </h1></td><td class = 'right'><h2>" 
+            + data.main.pressure + " hPa</td></tr></h2><tr><td class='left'><h2>Moisture : </h2></td><td class = 'right'><h2>" 
+            + data.main.humidity + " %</h2></td></tr></table>";
             console.log(detail);
             $("#temp").append(detail);
         });
